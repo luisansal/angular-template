@@ -1,1 +1,12 @@
 <h1>{{ title }}</h1>
+
+<input type="text" [(ngModel)]="id" />
+<button (click)="buscar()">Buscar</button>
+
+<ng-template [ngIf]="pokemon" [ngIfElse]="loading">
+  <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
+</ng-template>
+
+<ng-template #loading>
+  <div>Cargando...</div>
+</ng-template>
