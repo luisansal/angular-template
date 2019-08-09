@@ -7,9 +7,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:stats": "ng build --stats-json",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve": "lite-server",
+    "analyze": "webpack-bundle-analyzer dist/angular-template/stats-es5.json"
   },
   "private": true,
   "repository": "https://github.com/ldiego73/angular-template",
@@ -50,6 +53,7 @@
     "rimraf": "^2.6.3",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-bundle-analyzer": "^3.4.1"
   }
 }
