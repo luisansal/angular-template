@@ -20,7 +20,9 @@ export class PokemonComponent implements OnInit {
   constructor(private service: PokemonService) {}
 
   ngOnInit() {
-    this.loadPokemon(0);
+    this.service.multipleSearch(10, 20, 30).subscribe((data: Pokemon[]) => {
+      log.info(data);
+    });
   }
 
   buscar() {
