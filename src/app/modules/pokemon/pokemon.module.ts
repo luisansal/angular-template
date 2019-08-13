@@ -8,12 +8,16 @@ import { Logger } from 'src/app/core/logger';
 import { PokemonService } from './pokemon.service';
 
 import { PokemonItemComponent } from './components';
+import { PokemonImage } from './pipes';
 
 const log = new Logger('Pokemon');
 
+const components = [PokemonItemComponent];
+const pipes = [PokemonImage];
+
 @NgModule({
   imports: [CommonModule, FormsModule, PokemonRoutingModule],
-  declarations: [PokemonComponent, PokemonItemComponent],
+  declarations: [PokemonComponent, ...components, ...pipes],
   providers: [PokemonService],
 })
 export class PokemonModule {
